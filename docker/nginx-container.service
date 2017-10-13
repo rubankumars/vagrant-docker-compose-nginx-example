@@ -1,0 +1,11 @@
+[Unit]
+Description=nginx container
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a nginx-container
+ExecStop=/usr/bin/docker stop -t 2 nginx-container
+
+[Install]
+WantedBy=local.target

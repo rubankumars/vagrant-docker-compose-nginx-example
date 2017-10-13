@@ -1,0 +1,6 @@
+nginx:
+  image: vagrant-docker-compose-nginx-example
+  container_name: nginx-container
+  ports:
+    - 80:80
+
